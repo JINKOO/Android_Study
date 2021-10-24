@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Navigation_AAC_Sample</string>
+
+    <!-- title_fragment -->
+    <string name="trivia">Trivia!</string>
+    <string name="play">play</string>
+    <string name="leaderboards">LEADERBOARDS</string>
+
+    <!-- register fragment -->
+    <string name="select_an_avatar">Select An Avatar</string>
+</resources>
