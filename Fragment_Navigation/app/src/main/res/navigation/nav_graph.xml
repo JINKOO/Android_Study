@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.kjk.fragment_navigation.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_ThirdFragment"
+            app:destination="@id/ThirdFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.kjk.fragment_navigation.fragment.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first"/>
+
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="com.kjk.fragment_navigation.fragment.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second"/>
+
+    <fragment
+        android:id="@+id/ThirdFragment"
+        android:name="com.kjk.fragment_navigation.fragment.ThirdFragment"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third">
+        <action
+            android:id="@+id/action_ThirdFragment_to_thirdChildFragment"
+            app:destination="@id/thirdChildFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/thirdChildFragment"
+        android:name="com.kjk.fragment_navigation.fragment.ThirdChildFragment"
+        android:label="ThirdChildFragment"
+        tools:layout="@layout/fragment_third_child">
+        <action
+            android:id="@+id/action_thirdChildFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
